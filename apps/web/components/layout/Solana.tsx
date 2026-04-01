@@ -14,9 +14,10 @@ const TextSection: React.FC<TextSectionProps> = ({ title, paragraphs }) => {
       {paragraphs.map((paragraph, index) => (
         <p
           key={index}
-          className="sm:mt-20 mt-10 max-md:max-w-full font-nunito"
-          dangerouslySetInnerHTML={{ __html: paragraph }}
-        />
+          className="sm:mt-20 mt-10 max-md:max-w-full font-nunito whitespace-pre-line"
+        >
+          {paragraph}
+        </p>
       ))}
     </section>
   );
@@ -27,9 +28,14 @@ const MyComponent: React.FC = () => {
     {
       title: "The Universe of Solana",
       paragraphs: [
-        `Ridiculously compelling, SolCanvas is your personal teleport to the <br /> Solana ecosystem. It's not just an app, it's the revolution your <br /> pocket has been waiting for.`,
-        `SolCanvas: It's like having the cosmos in your palm, but the <br /> cosmos is just Solana projects, which is arguably better than the <br /> actual cosmos.`,
-        `Get involved, add your projects, edit existing ones, and rack up <br /> those SPL tokens. Who said nothing in life is free?`,
+        `Ridiculously compelling, SolCanvas is your personal teleport to the
+Solana ecosystem. It's not just an app, it's the revolution your
+pocket has been waiting for.`,
+        `SolCanvas: It's like having the cosmos in your palm, but the
+cosmos is just Solana projects, which is arguably better than the
+actual cosmos.`,
+        `Get involved, add your projects, edit existing ones, and rack up
+those SPL tokens. Who said nothing in life is free?`,
       ],
     },
   ];
